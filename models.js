@@ -36,7 +36,7 @@ const BlogPosts = {
     // return posts sorted (descending) by
     // publish date
     return this.posts.sort(function(a, b) {
-      return b.publishDate - a.publishDate
+      return b.publishDate - a.publishDate;
     });
   },
   delete: function(id) {
@@ -52,7 +52,7 @@ const BlogPosts = {
       post => post.id === updatedPost.id);
     if (postIndex === -1) {
       throw StorageException(
-        `Can't update item \`${id}\` because doesn't exist.`)
+        `Can't update item \`${id}\` because doesn't exist.`);
     }
     this.posts[postIndex] = Object.assign(
       this.posts[postIndex], updatedPost);
